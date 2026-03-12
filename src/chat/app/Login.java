@@ -51,7 +51,8 @@ public class Login {
         if (!checkPasswordComplexity(pass)) {
             return "Password is not correctly formatted please ensure that your password contains atleast eight characters a capital letter a number and a special character.";
         }
-
+        
+        ///This method validates the South African phone number.
         if (!checkCellPhoneNumber(phone)) {
             return "Cell phone number incorrectly formatted or does not contain international code.";
         }
