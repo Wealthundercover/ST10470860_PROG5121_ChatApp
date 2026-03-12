@@ -2,8 +2,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package chat.app;
+package com.mycompany.chatapp;
 
+/**
+ *
+ * @author Ngcebo
+ */
 public class Login {
 
     // Variables to store user data after registration
