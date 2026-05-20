@@ -59,7 +59,6 @@ public class Message {
         String firstWord = words[0];
         String lastWord = words[words.length - 1];
         
-        // Clean trailing punctuation like '?' so HITONIGHT? becomes HITONIGHT
         firstWord = firstWord.replaceAll("[^a-zA-Z0-9]", "");
         lastWord = lastWord.replaceAll("[^a-zA-Z0-9]", "");
         
