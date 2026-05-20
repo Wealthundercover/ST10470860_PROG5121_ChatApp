@@ -3,12 +3,11 @@
  */
 
 package com.mycompany.chatapp;
-
+import java.util.Scanner;
 /**
  *
  * @author Ngcebo
  */
-import java.util.Scanner;
 
 public class ChatApp {
 
@@ -23,7 +22,7 @@ public class ChatApp {
         System.out.print("Enter Last Name: ");
         String lName = input.nextLine();
         
-        System.out.print("Please provide a username:");
+        System.out.print("Please provide a username: ");
         String user = input.nextLine();
         
         System.out.print("Enter Password: ");
@@ -32,11 +31,9 @@ public class ChatApp {
         System.out.print("Enter Phone (+27...): ");
         String phone = input.nextLine();
 
-        // Validate Registration
         String regStatus = loginProcessor.registerUser(user, pass, phone, fName, lName);
         System.out.println("\n" + regStatus);
 
-        // Only proceed to Login if registration succeeded
         if (regStatus.contains("successfully captured")) {
             System.out.println("\n--- LOGIN ---");
             System.out.print("Enter Username: ");
@@ -52,9 +49,8 @@ public class ChatApp {
                 System.out.println("\nWelcome to QuickChat.");
                 
                 int menuChoice = 0;
-                int messageCounter = 0; // Tracks message index sequence
+                int messageCounter = 0; 
 
-                // Loop runs continuously until user selects Option 3) Quit
                 while (menuChoice != 3) {
                     System.out.println("\nPlease choose one of the following features from the menu:");
                     System.out.println("1) Send Messages");
@@ -64,10 +60,10 @@ public class ChatApp {
                     
                     if (input.hasNextInt()) {
                         menuChoice = input.nextInt();
-                        input.nextLine(); // Clear buffer
+                        input.nextLine(); 
                     } else {
                         System.out.println("Invalid numeric input. Please try again.");
-                        input.nextLine(); // Clear invalid token
+                        input.nextLine(); 
                         continue;
                     }
 
@@ -77,25 +73,22 @@ public class ChatApp {
                             int limit = 0;
                             if (input.hasNextInt()) {
                                 limit = input.nextInt();
-                                input.nextLine(); // Clear buffer
+                                input.nextLine(); 
                             } else {
                                 System.out.println("Invalid number. Returning to main menu.");
                                 input.nextLine();
                                 break;
                             }
                             
-                            // Loop to capture the set number of messages
                             for (int i = 0; i < limit; i++) {
                                 System.out.println("\n--- Entering Details for Message " + (i + 1) + " ---");
                                 
-                                // Capture and validate Recipient Number
                                 String phoneStatus = "";
                                 String recipientNum = "";
                                 while (true) {
                                     System.out.print("Enter Recipient Cell Number (e.g., +27718693002): ");
                                     recipientNum = input.nextLine();
                                     
-                                    // Make a temporary object to run the assignment validation string check
                                     Message tempCheck = new Message(messageCounter, recipientNum, "Test");
                                     phoneStatus = tempCheck.checkRecipientCell(recipientNum);
                                     System.out.println(phoneStatus);
@@ -105,7 +98,6 @@ public class ChatApp {
                                     }
                                 }
                                 
-                                // Capture and validate Message text length constraints
                                 String msgContent = "";
                                 while (true) {
                                     System.out.print("Enter your message content: ");
@@ -120,13 +112,11 @@ public class ChatApp {
                                     }
                                 }
                                 
-                                // Instantiate the real Message tracker object
                                 Message currentMsg = new Message(messageCounter, recipientNum, msgContent);
-                                messageCounter++; // Prep increment for next message index code
+                                messageCounter++; 
                                 
                                 System.out.println("Message ID generated: <" + currentMsg.getMessageID() + ">");
                                 
-                                // Display Action Prompt Selection Menu
                                 System.out.println("\nWhat would you like to do with this message?");
                                 System.out.println("1) Send Message");
                                 System.out.println("2) Disregard Message");
@@ -136,19 +126,16 @@ public class ChatApp {
                                 int actionChoice = 0;
                                 if (input.hasNextInt()) {
                                     actionChoice = input.nextInt();
-                                    input.nextLine(); // Clear buffer
+                                    input.nextLine(); 
                                 }
                                 
-                                // Output delivery process confirmation strings
                                 String deliveryReceipt = currentMsg.SentMessage(actionChoice);
                                 System.out.println(deliveryReceipt);
                                 
-                                // Print structured details layout summary block required by rubric
                                 System.out.println("\n=== Full Message Submission Details ===");
                                 System.out.println(currentMsg.printMessages());
                                 System.out.println("=======================================");
                                 
-                                // Show global accumulation totals count status metrics update
                                 System.out.println("Total global sent messages tracked: " + currentMsg.returnTotalMessagess());
                             }
                             break;
@@ -166,7 +153,6 @@ public class ChatApp {
                     }
                 }
             }
-            
         }
         input.close();
     }
