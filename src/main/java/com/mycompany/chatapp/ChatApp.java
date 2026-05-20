@@ -46,7 +46,9 @@ public class ChatApp {
             System.out.println(loginProcessor.returnLoginStatus(isLoginSuccessful));
             
             if (isLoginSuccessful) {
-                System.out.println("\nWelcome to QuickChat.");
+                System.out.println("\n=======================================");
+                System.out.println("       WELCOME TO QUICKCHAT          ");
+                System.out.println("=======================================");
                 
                 int menuChoice = 0;
                 int messageCounter = 0; 
