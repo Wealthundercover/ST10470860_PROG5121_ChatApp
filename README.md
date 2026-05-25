@@ -43,8 +43,11 @@ The messaging module adds functional tracking, strict string verification routin
 
 ## 📺 Project Presentation
 You can watch the full technical walkthrough and demonstration of this application on YouTube:
-
+## PART 1
 **Link:** [Watch the Presentation Here](https://youtu.be/6yxX21c1gg4)
+
+## PART 2
+**Link:** [Watch the presentation Here](https://youtu.be/_8gT-BJGN58?si=PC5MVN4LDJ2VdY8q)
 
 ---
 
@@ -53,3 +56,6 @@ You can watch the full technical walkthrough and demonstration of this applicati
 * **Deitel, P.J. & Deitel, H.M.** 2017. *Java: How to Program, Early Objects*. 11th ed. Upper Saddle River: Pearson Education.
 * **Oracle.** 2026. *Class String*. [Online]. Available at: https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html [Accessed 13 April 2026].
 * **Vogel, L.** 2021. *Unit Testing with JUnit - Tutorial*. [Online]. Available at: https://www.vogella.com/tutorials/JUnit/article.html [Accessed 13 April 2026].
+* **Deitel, P.J. & Deitel, H.M.** 2020. *Java How to Program, Late Objects*. 11th ed. New York: Pearson. [Accessed 22 May 2026].
+* **Horstmann, C.S.** 2023. *Core Java Volume I–Fundamentals*. 12th ed. Boston: Prentice Hall. [Accessed 22 May 2026].
+* **Massol, V. & Dai, T.** 2024. *JUnit in Action*. 3rd ed. Greenwich: Manning Publications. [Accessed 22 May 2026].
